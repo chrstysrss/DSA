@@ -1,9 +1,12 @@
 #ifndef STACK_ARRAY
-#define TOP -1
+#define STACK_ARRAY
+#include <stdbool.h>
+
+#define MAX 10
 
 typedef struct {
 	int data [MAX];
-	int count;
+	int top;
 } StaticArrayList;
 
 bool isEmpty(StackArrayList s);
@@ -20,7 +23,7 @@ void display(StackArrayList s);
 void visualize(StackArrayList s);
 
 // others
-// create a function that would get all even numbers and retur as a
+// create a function that would get all even numbers and return as a
 // new stack removing from the old stack
 
 #endif
