@@ -3,31 +3,30 @@
 #include <stdbool.h>
 #include "StackArray.h"
 
-#define MAX 50
-
 void initStack(StackArrayList *s){
-	s->count = TOP
+	s->top = -1
 }
 
 StackArrayList createStack(){
 	StackArrayList s;
-	s.count = TOP;
+	s.top = -1;
 	return s;
 }
 
 bool isEmpty(StackArrayList s){
-	return s.count == TOP;
+	return s.top == -1;
 }
 
 bool isFull(StackArrayList s){
-	return s.count == MAX - 1;
+	return s.top == MAX - 1;
 }
 
 bool stack_push(StackArrayList *s, int elem){
 	if (isFull(*s)){
+		printf("STACK IS FULL!\n",elem);
 		return false;
 	}
-	s->data[++(s->count)] = elem;
+	s->data[++(s->top)] = elem;
 	return true;
 }
 
