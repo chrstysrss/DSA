@@ -4,7 +4,7 @@
 #include "StackArray.h"
 
 void initStack(StackArrayList *s){
-	s->top = -1
+	s->top = -1;
 }
 
 StackArrayList createStack(){
@@ -31,17 +31,49 @@ bool stack_push(StackArrayList *s, int elem){
 }
 
 bool stack_pop(StackArrayList *s){
-	
+	if (isEmpty(*s)){
+		printf("STACK IS EMPTY!\n");
+		return false;
+	}
+	s->top--;
+	return true;
 }
 
 int stack_peek(StackArrayList s){
-	
+	if (isEmpty(s)){
+		printf("STACK IS EMPTY!\n");
+		return -1;
+	}
+	return s.data[s.top];
 }
 
-void display(StackArrayList s){
-	
+void display(StackArrayList s) {
+    StackArrayList tempStack = createStack();
+    
+    while (!isEmpty(s)) {
+        stack_push(&tempStack, stack_peek(s));
+        stack_pop(&s);
+    }
+    
+    printf("Display: ");
+    while (!isEmpty(tempStack)) {
+        int elem = stack_peek(tempStack);
+        printf("%d ", elem);
+        stack_push(&s, elem); 
+        stack_pop(&tempStack);
+    }
+    printf("\n");
 }
 
-void visualize(StackArrayList s){
-	
+void visualize(StackArrayList s) {
+    if (isEmpty(s)) {
+        printf("STACK EMPTY\n");
+        return;
+    }
+    
+    printf("Visualize: ");
+    for (int i = s.top; i >= 0; i--) {
+        printf("%d ", s.data[i]);
+    }
+    printf("\n");
 }

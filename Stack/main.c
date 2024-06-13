@@ -1,8 +1,35 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "StackArray.h"
+#include <stdbool.h>
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+int main() {
+    StackArrayList s;
+    initStack(&s); 
 
-int main(int argc, char *argv[]) {
-	return 0;
+    stack_push(&s, 1);
+    stack_push(&s, 2);
+    stack_push(&s, 3);
+	stack_push(&s, 4);
+	
+    printf("~Current Stack~\n");
+    
+    int peekVal = stack_peek(s);
+	printf("Top is %d\n", peekVal);
+	
+    visualize(s);
+    display(s);
+	
+    stack_pop(&s); 
+    stack_pop(&s);
+
+    printf("~Updated Stack~\n");
+    
+    int peekVal2 = stack_peek(s);
+	printf("Top is %d\n", peekVal2);
+	
+    visualize(s);
+	display(s);
+
+	
+    return 0;
 }
