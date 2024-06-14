@@ -77,3 +77,36 @@ void visualize(StackArrayList s) {
     }
     printf("\n");
 }
+
+StackArrayList getEvens(StackArrayList *s) {
+    StackArrayList evens= createStack();
+    StackArrayList temp = createStack();
+
+    while (!isEmpty(*s)) {
+        int elem = stack_peek(*s);
+        stack_pop(s);
+
+        if (elem % 2 == 0) {
+            stack_push(&evens, elem);
+        } else {
+            stack_push(&temp, elem);
+        }
+    }
+
+    while (!isEmpty(temp)) {
+        stack_push(s, stack_peek(temp));
+        stack_pop(&temp);
+    }
+
+    return evens;
+}
+
+void displayEvens(StackArrayList *s) {
+    StackArrayList evens = getEvens(s);
+
+    printf("\n~Even Numbers~\n");
+    display(evens);
+
+    printf("\n~Odd Numbers~\n");
+    display(*s);
+}

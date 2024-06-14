@@ -22,6 +22,8 @@ int stack_peek(StackArrayList s);
 void display(StackArrayList s);
 void visualize(StackArrayList s);
 
+StackArrayList getEvens(StackArrayList *s);
+void displayEvens(StackArrayList *s);
 // others
 // create a function that would get all even numbers and return as a
 // new stack removing from the old stack
