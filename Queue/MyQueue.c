@@ -10,14 +10,35 @@ void initQueue(Queue *q){
 
 void enQueue(Queue *q, int n){
 	NodePtr newNode = (NodePtr)malloc(sizeof(Node));
-	if (newNode == NUll){
+	if (newNode == NULL){
 		printf("Memory not allocated");
 	}
-	temp -> data = n;
+	newNode -> data = n;
+	newNode->next = NULL;
+    
+    if (q->rear == NULL) {
+        q->front = newNode;
+        q->rear = newNode;
+    } else {
+        q->rear->next = newNode;
+        q->rear = newNode;
+    }
 }
- 
+
 void deQueue(Queue *q){
-	
+	if (q->front == NULL) {
+        printf("Queue is empty\n");
+        return;
+    }
+    
+    NodePtr temp = q->front;
+    q->front = q->front->next;
+
+    if (q->front == NULL) {
+        q->rear = NULL;
+    }
+
+    free(temp);
 }
 
 int Front(Queue *q){
@@ -31,4 +52,18 @@ int Rear(Queue *q){
 bool isEmpty(Queue *q){
 	return (q->rear == NULL) ? true : false;
 
+}
+
+void displayQueue(Queue *q) {
+    NodePtr curr = q->front;
+    if (curr == NULL) {
+        printf("Queue is empty\n");
+        return;
+    }
+    printf("Queue: ");
+    while (curr != NULL) {
+        printf("%d ", curr->data);
+        curr = curr->next;
+    }
+    printf("\n");
 }

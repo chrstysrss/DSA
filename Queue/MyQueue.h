@@ -18,6 +18,7 @@ void deQueue(Queue *q);
 int Front(Queue *q);
 int Rear(Queue *q);
 bool isEmpty(Queue *q);
+void displayQueue(Queue *q);
 
 #endif
 //Enqueue
