@@ -145,5 +145,5 @@ int intersectionset(int a, int b){
 }
 
 int differenceSet(int a, int b){
-	// insert code logic to find the difference 
+  return a & ~b;
 }
