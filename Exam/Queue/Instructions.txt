@@ -1,0 +1,197 @@
+Capacity? What's that ?
+by Patrick Roy Elalto
+
+Implement the Queue Data Structure using a circular array as defined in "myqueue.h" header library. Anything provided in the header library doesn't need to be implemented and at the same time they are ready to be used.
+
+Please add your code/ implementation of enqueue() and front() they are numbered as 1 and 2 respectively.
+
+When creating enqueue() in the scenario that the array is currently full, expand the array so that an item may be inserted either way.
+
+ 
+
+This question is very similar to that of #1, with few minor differences, the main difference would be the inclusion of a resize() that would allow the insertion of new items even though the array is currently "full".
+
+Note: Insert your answer just below the numbered 1 - 5 problems in "main.c". The implementations of the "myqueue.h" is hidden from you. The "stdbool.h" is a library for the bool datatype that would be able to have values either true or false. The initial size is 6.
+
+bool x = false;
+
+ 
+
+Hint: To resize move all items into the new a new array while keeping track of the current head and tail (current queue).
+
+Sample Output 1
+
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 2
+Success adding 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 3
+Success adding 3.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 4
+Success adding 4.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 5
+Success adding 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 6
+Success adding 6.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 7
+Success adding 7.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 8
+Success adding 8.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 9
+Success adding 9.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue [1, 2, 3, 4, 6, 7, 8, 9]
+Sample Output 2
+
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 2
+Success adding 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 4
+Success adding 4.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 5
+Success adding 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 6
+Success adding 6.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 10
+Success adding 10.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 11
+Success adding 11.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 12
+Success adding 12.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 13
+Success adding 13.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 4.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue [5, 6, 10, 11, 12, 13]
+Sample Output 3
+
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 5
+Success adding 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 6
+Success adding 6.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 7
+Success adding 7.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 5
+Success adding 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 6.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 10
+Success adding 10.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue [1, 7, 5, 1, 1, 1, 10]
+
+TEST CASES:
+Test case1:
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 2
+Success adding 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 4
+Success adding 4.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 5
+Success adding 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 6
+Success adding 6.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 10
+Success adding 10.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 11
+Success adding 11.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 12
+Success adding 12.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 13
+Success adding 13.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 4.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue [5, 6, 10, 11, 12, 13]
+
+Test Case2:
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 5
+Success adding 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 6
+Success adding 6.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 7
+Success adding 7.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 5
+Success adding 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 6.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 10
+Success adding 10.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue [1, 7, 5, 1, 1, 1, 10]

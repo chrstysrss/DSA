@@ -1,0 +1,66 @@
+/*It still tastes good. Kahit panis. :-P
+by Gran Sabandal
+
+Complete the function that would return all the expired goods.
+
+ 
+
+Answer the logic for getting the expired products utilizing the operations or property of a stack data structure as referenced by number 1.
+
+ 
+
+Answer the code snippet for calling the visualization/display of the contents of each expected value as referenced by number 2, 3, and 4.
+
+ 
+
+Note: You can use all the available functions defined in "myheader.h". The implementation is purposely hidden from you.
+
+Sample Output 1
+Enter how many products to populate: 10
+Enter date reference(dd-mm-yyyy): 1-1-2024
+Initial List: STACK [Top: 10 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, biko, kutsinta, *, *, *, *, *}
+Expired Goods: STACK [Top: 1 | Max: 15]{puto, *, *, *, *, *, *, *, *, *, *, *, *, *, *}
+Original List: STACK [Top: 10 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, biko, kutsinta, *, *, *, *, *}
+
+Sample Output 2
+Enter how many products to populate: 15
+Enter date reference(dd-mm-yyyy): 2-1-2024
+Initial List: STACK [Top: 15 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, biko, kutsinta, maja, pichi-pichi, suman, turon, bilo-bilo}
+Expired Goods: STACK [Top: 2 | Max: 15]{bilo-bilo, puto, *, *, *, *, *, *, *, *, *, *, *, *, *}
+Original List: STACK [Top: 15 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, biko, kutsinta, maja, pichi-pichi, suman, turon, bilo-bilo}
+
+Sample Output 3
+Enter how many products to populate: 8
+Enter date reference(dd-mm-yyyy): 16-7-2024
+Initial List: STACK [Top: 8 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, *, *, *, *, *, *, *}
+Expired Goods: STACK [Top: 5 | Max: 15]{balut, balanghoy, puto, linubid, binangkal, *, *, *, *, *, *, *, *, *, *}
+Original List: STACK [Top: 8 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, *, *, *, *, *, *, *}
+
+TEST CASES:
+Test case 1:
+Enter how many products to populate: 10
+Enter date reference(dd-mm-yyyy): 1-1-2024
+Initial List: STACK [Top: 10 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, biko, kutsinta, *, *, *, *, *}
+Expired Goods: STACK [Top: 1 | Max: 15]{puto, *, *, *, *, *, *, *, *, *, *, *, *, *, *}
+Original List: STACK [Top: 10 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, biko, kutsinta, *, *, *, *, *}
+
+Test case 2:
+Enter how many products to populate: 15
+Enter date reference(dd-mm-yyyy): 2-1-2024
+Initial List: STACK [Top: 15 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, biko, kutsinta, maja, pichi-pichi, suman, turon, bilo-bilo}
+Expired Goods: STACK [Top: 2 | Max: 15]{bilo-bilo, puto, *, *, *, *, *, *, *, *, *, *, *, *, *}
+Original List: STACK [Top: 15 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, biko, kutsinta, maja, pichi-pichi, suman, turon, bilo-bilo}
+
+Test case 3:
+Enter how many products to populate: 8
+Enter date reference(dd-mm-yyyy): 16-7-2024
+Initial List: STACK [Top: 8 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, *, *, *, *, *, *, *}
+Expired Goods: STACK [Top: 5 | Max: 15]{balut, balanghoy, puto, linubid, binangkal, *, *, *, *, *, *, *, *, *, *}
+Original List: STACK [Top: 8 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, balut, sapin-sapin, *, *, *, *, *, *, *}
+
+Test case 4:
+Enter how many products to populate: 6
+Enter date reference(dd-mm-yyyy): 2-7-2024
+Initial List: STACK [Top: 6 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, *, *, *, *, *, *, *, *, *}
+Expired Goods: STACK [Top: 4 | Max: 15]{balanghoy, puto, linubid, binangkal, *, *, *, *, *, *, *, *, *, *, *}
+Original List: STACK [Top: 6 | Max: 15]{saging, binangkal, bibingka, linubid, puto, balanghoy, *, *, *, *, *, *, *, *, *}

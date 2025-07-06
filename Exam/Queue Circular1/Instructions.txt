@@ -1,0 +1,133 @@
+I just want the basic. Oh-Q?
+by Gran Sabandal
+
+Implement the Queue Data Structure using a circular array as defined in "myqueue.h" header library. Anything provided in the header library doesn't need to be implemented and at the same time they are ready to be used.
+
+ 
+
+Please add your code/ implementation of enqueue() and front() they are numbered as 1 and 2 respectively.
+
+Make also a call for these functions in the main() they are numbered as 3 and 4 respectively.
+
+ 
+
+Note: Insert your answer just below the numbered 1 - 4 problems in "main.c". The implementations of the "myqueue.h" is hidden from you. The "stdbool.h" is a library for the bool datatype that would be able to have values either true or false.
+
+ 
+
+bool x = false;
+
+Sample Output 1
+
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue []
+Sample Output 2
+
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 5
+Success adding 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 10
+Success adding 10.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue [5, 10]
+Sample Output 3
+
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Queue is empty.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 2
+Success adding 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue []
+
+
+TEST CASES
+Test case 1:
+Expected Output:
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue []
+
+Test Case 2:
+Expected Output:
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 5
+Success adding 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 10
+Success adding 10.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue [5, 10]
+
+Test Case 3:
+Expected Output:
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Queue is empty.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 2
+Success adding 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue []
+
+Test Case 4:
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 2
+Success adding 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 3
+Success adding 3.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 4
+Success adding 4.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 5
+Success adding 5.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 6
+Queue is full.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 7
+Queue is full.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue [2, 3, 4, 5]
+
+Test Case 5:
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Queue is empty.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Queue is empty.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 2
+Success adding 2.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 2
+Success removing 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 1
+Success adding 1.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 1
+Enter item to add: 4
+Success adding 4.
+Enter operation (1-Enqueue, 2-Dequeue, 0-Exit): 0
+Queue [2, 1, 4]
